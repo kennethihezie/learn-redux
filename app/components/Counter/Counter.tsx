@@ -16,6 +16,11 @@ import styles from './counter.module.css'
 
 export const Counter = () => {
   const dispatch = useDispatch()
+  /*
+  Any time an action has been dispatched and the Redux store has been updated, useSelector 
+  will re-run our selector function. If the selector returns a different value than last time, 
+  useSelector will make sure our component re-renders with the new value.
+  */
   const count = useSelector(selectCount)
   const [incrementAmount, setIncrementAmount] = useState(2)
 
